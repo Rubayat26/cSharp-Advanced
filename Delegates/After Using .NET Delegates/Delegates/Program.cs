@@ -23,3 +23,5 @@ namespace Delegates
         }
     }
 }
+
+//Action<> because here our method does not return a value 
