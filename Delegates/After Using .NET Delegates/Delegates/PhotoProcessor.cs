@@ -14,3 +14,5 @@ namespace Delegates
         }
     }
 } 
+
+//here we have used .NET provided delgates 

@@ -11,9 +11,10 @@ namespace Delegates
 
             var filters = new PhotoFilters();
 
-            PhotoProcessor.PhotoFilterHandler filterHandler1 = filters.ApplyBrightness; //created filterHandler1
-                                                                                        //of type
-                                                                                        //PhotoFilterHandler 
+            PhotoProcessor.PhotoFilterHandler filterHandler1 = filters.ApplyBrightness; //created
+                                                                                        //filterHandler1
+                                                                                     //of type
+                                                                                    //PhotoFilterHandler 
             
             
             
@@ -37,9 +38,11 @@ namespace Delegates
 //"public delegate void PhotoFilterHandler(Photo photo);"
 
 
+//Dlegate is a pointer to a method with a signature 
 
 
 
 
 
-
+// the idea is we will create a delegate whos only job would be to point to the
+//method which we want 
