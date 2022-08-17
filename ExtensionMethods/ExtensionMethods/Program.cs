@@ -35,4 +35,4 @@ namespace ExtensionMethods
 
 
 // in real word you will be using extension methods most of the time
-//instead of creating them 
+//instead of creating them, and we should avoid creating them if we have other ways 

@@ -4,9 +4,9 @@ namespace Linq
 {
     public class BookRepository
     {
-        public IEnumerable<Book> GetBooks()
+        public IEnumerable<Book> GetBooks()  //IEnumerable collection
         {
-            return new List<Book>
+            return new List<Book>      //object initializer to create imiidiate list 
             {
                 new Book() {Title = "ADO.Net Step by Step", Price = 5 },
                 new Book() {Title = "ASP.NET MVC", Price = 9.99f },
@@ -17,3 +17,4 @@ namespace Linq
         }
     }
 }
+
