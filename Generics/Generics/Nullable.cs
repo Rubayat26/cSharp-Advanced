@@ -11,7 +11,8 @@
 
         public Nullable(T value)
         {
-            _value = value;
+            _value = value;       // here we are assigning the value to the object 
+                                //_value and basically its being boxed here 
         }
 
         public bool HasValue
@@ -31,10 +32,11 @@
         {
             if (HasValue)
                 return (T)_value; // here we are casting  the object value to the T 
+                                   //type value, basically unboxing the value
                                   // It is safe as we are already passing the T type 
                                   //value in the constructor
 
-            return default(T);  //default keyword is used to return the default value  
+            return default;  //default keyword is used to return the default value  
         }
     }
 }

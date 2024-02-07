@@ -4,7 +4,8 @@
     {
         public float CalculateDiscount(TProduct product)
         {
-            return product.Price;
+            return product.Price; //here all the methods and properties of the product class
+                                  //are available to us
         }
     }
 } 

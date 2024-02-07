@@ -4,7 +4,7 @@ namespace Generics
 {
     class Sample
     {
-        static int Max(int a, int b)
+        public static int Max(int a, int b)
         {
             return a > b ? a : b;
         }
@@ -16,7 +16,7 @@ namespace Generics
         // where T : new()
 
         // Constraint to an interface
-        static T Max<T>(T a, T b) where T : IComparable
+        public static T Max<T>(T a, T b) where T : IComparable
         {
             return a.CompareTo(b) > 0 ? a : b;
         }

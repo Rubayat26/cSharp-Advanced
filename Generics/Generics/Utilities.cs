@@ -37,11 +37,16 @@ namespace Generics
 
         public void DoSomething(T value)
         {
-            var obj = new T();   // we have to initialize new() to get the default
+            var obj = new T();   // here we are creating an instance of T
+                                 // we have to initialize new() to get the default
                                  //constructor for T
+                                 // here we are creating an instance of T
+            Console.WriteLine(value.GetType().Name);
+
+           
         }
 
-        
+
     }
 }
 
@@ -55,7 +60,7 @@ namespace Generics
 
    //appliying contraint to a class, here T is  a product or any of its children
    //
-   
+    
 
 // where T : struct
 
