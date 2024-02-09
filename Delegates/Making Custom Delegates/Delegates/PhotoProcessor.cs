@@ -4,13 +4,20 @@ namespace Delegates
 {
     public class PhotoProcessor
     {
-        public delegate void PhotoFilterHandler(Photo photo); //here we are creating the delegate
+        public delegate void PhotoFilterHandler(Photo photo); // Here we are creating the delegate
+                                                             //PhotoFilterHandler whose only job is to
+                                                             //point to the different methods of PhotoFilter class
+                                                             //When deifining Delegate we need to define the signature
+                                                             //of the method which we want to point to.
+
 
         public void Process(string path, PhotoFilterHandler filterHandler)
         {
             var photo = Photo.Load(path);
 
-            filterHandler(photo);   // we are calling the delegate and passing the input 
+            filterHandler(photo);   //with these we dont know what kind of filter is being applied
+                                    //we are just calling the delegate and the delegate is pointing to the
+                                    //method which we want to call. 
 
             photo.Save();
         }

@@ -19,13 +19,14 @@ namespace Delegates
             
             
             filterHandler1 += filters.ApplyContrast; // pointing to PhotoFilters ApplyContrast method 
-            filterHandler1 += RedEyeRemove;
+            filterHandler1 += RedEyeRemove;  
 
             processor.Process("photo.jpg", filterHandler1);
         }
 
 
-        public static void RedEyeRemove(Photo photo) 
+        public static void RedEyeRemove(Photo photo) //here we are creating a new method which we want to
+                                                     //point to. We need to match the signature of the delegate
                                                  
         {
             Console.WriteLine("removed red eye");
