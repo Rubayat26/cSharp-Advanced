@@ -19,23 +19,25 @@ namespace EventsAndDelegates
 
         // #1
         public delegate void VideoEncodedEventHandler(object source, VideoArgs args); //instead of eventArgs
-                                                                                      //we are sending VideoArgs
+        //we are sending VideoArgs
 
 
 
-        
+
         // #2
         public event VideoEncodedEventHandler VideoEncoded;
+        // public event EventHandler VideoEncoding; //when the video is encoding before the event is raised
 
-        /*
-        // EventHandler
-        // EventHandler<TEventArgs>
-        
+
+        // EventHandler from .net library comes with two versions
+        // EventHandler             // if the EventHander is not sending any data
+        // EventHandler<TEventArgs> // if the EventHandler is sending any data as well 
+
         // step 1 and 2 together 
-        // public event EventHandler<VideoArgs> VideoEncoded;
-        // public event EventHandler VideoEncoding; 
+        //public event EventHandler<VideoArgs> VideoEncoded;
+         
 
-        */
+        
 
         public void Encode(Video video)
         {

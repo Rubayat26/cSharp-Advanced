@@ -15,12 +15,18 @@ namespace EventsAndDelegates
 
 
 
-            videoEncoder.VideoEncoded += mailService.OnVideoEncoded;  //we are doing the subscribtion here 
-            
-            
-            videoEncoder.VideoEncoded += messageService.OnVideoEncoded; //we are adding another subscriber
+            videoEncoder.VideoEncoded += mailService.OnVideoEncoded;  // we are doing the subscribtion here 
+                                                                      // Look we dont have the parenthesis 
+                                                                      //we are not calling the method here
+                                                                      //we are just passing the reference of the method
 
-           
+
+                                                     //VideoEncoded event behind the scenes is a list of pointers to methods
+            
+            
+            videoEncoder.VideoEncoded += messageService.OnVideoEncoded; // we are adding another subscriber
+
+           //Again we need to do the subscription before we call the method, otherwise the event would be null
             
             videoEncoder.Encode(video);
         }

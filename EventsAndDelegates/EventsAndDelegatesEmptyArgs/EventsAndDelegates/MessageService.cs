@@ -4,7 +4,7 @@
 
 namespace EventsAndDelegates
 {
-    internal class MessageService
+    public class MessageService  //subscriber
     {
         public void OnVideoEncoded(object source, EventArgs args)
         {
