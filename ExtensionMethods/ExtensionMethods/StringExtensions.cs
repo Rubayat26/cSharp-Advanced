@@ -31,7 +31,7 @@ namespace System  //namespace System is used so that the extension method remain
 
 
 //The extension method cannot work if the class created them is out of scope
-
+//If the class is out of scope , we have to use the using System namespace to use the extension method
 
 
 // string array is an array which does not have Take method. But later microsoft introduced

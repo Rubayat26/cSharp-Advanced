@@ -26,9 +26,10 @@ namespace Linq
                 Console.WriteLine(book.Price);
             }
 
+          
 
 
-
+            //LINQ Extension Methods
             var titleList = books.Where(b => b.Price <= 10)   //Due to select we get a list 
                                     .OrderBy(b => b.Title)    //of strings 
                                     .Select(b=>b.Title);
@@ -39,6 +40,11 @@ namespace Linq
                 Console.WriteLine( book);
             }
 
+            //LINQ Query Operators
+            var cheapBooks1 = from b in books
+                              where b.Price <= 10
+                              orderby b.Title
+                              select b.Title;
             
 
             var maxPrice = books.Max(b => b.Price);
@@ -46,10 +52,11 @@ namespace Linq
 
 
 
-            var book1 = books.SingleOrDefault(b => b.Title== "ASP.NET MVC") ;
+            var book1 = books.SingleOrDefault(b => b.Title== "ASP.NET MVC") ; //if the title is not found it will return null
             Console.WriteLine(book1.Price);
 
-
+            var book2 = books.FirstOrDefault(b => b.Title == "C# Advanced Topics"); //if the title is not found it will return the default value of the type
+            Console.WriteLine(book2.Price);
 
             var bookCollection = books.Skip(2).Take(3);
             Console.WriteLine("no of books in new collection : "+bookCollection.Count());
@@ -61,3 +68,6 @@ namespace Linq
     
     }
 }
+
+//Beauty of LINQ is that it is language independent. It can be used in C#, VB, F# etc.
+//It is also provider independent. It can be used with SQL, XML, Objects, ADO.NET etc.
