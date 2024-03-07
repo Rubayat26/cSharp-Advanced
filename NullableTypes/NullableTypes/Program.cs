@@ -12,7 +12,9 @@ namespace NullableTypes
                                                       //null then use DateTime.Today
 
             DateTime date3 = (date != null) ? date.GetValueOrDefault() : DateTime.Today;
-
+                                                     // here GetValuerDefault() is used as date
+                                                     //is nullable and date3 is not nullable
+                                                     
 
 
             Console.WriteLine(date2);
@@ -24,6 +26,6 @@ namespace NullableTypes
 }
 
 
-//Null Colaesing Operator  ??
+//  ?? Null Colaesing Operator
 
 //Null Conditional Operator  ?

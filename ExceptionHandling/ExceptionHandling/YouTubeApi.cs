@@ -12,7 +12,8 @@ namespace ExceptionHandling
                 // Access YouTube web service 
                 // Read the data 
                 // Create a list of Video objects
-                throw new Exception("Oops some low level YouTube error.");
+                throw new Exception("Oops some low level YouTube error."); //  here we are throwing an exception
+                                                                           //to simulate a low level error
             }
             catch (Exception ex)
             {
